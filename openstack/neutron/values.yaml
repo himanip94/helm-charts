@@ -197,6 +197,7 @@ cc_fabric:
     enabled: false
     platforms: ['eos', 'nxos']
 
+coordinationBackend: "memcached"
 arista:
   api_type: nocvx
   sync_interval: 60
