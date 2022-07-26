@@ -1,7 +1,7 @@
 dependencies:
 - name: utils
   repository: https://charts.eu-de-2.cloud.sap
-  version: 0.4.2
+  version: 0.7.0
 - name: mariadb
   repository: https://charts.eu-de-2.cloud.sap
   version: 0.3.55
@@ -20,5 +20,5 @@ dependencies:
 - name: redis
   repository: https://charts.eu-de-2.cloud.sap
   version: 1.2.1
-digest: sha256:f778ea8ffe7f4beb8ffebecabcda6ee4bc01034b98b85e769b7281afad75a751
-generated: "2022-07-27T10:31:07.968744273+02:00"
+digest: sha256:0fb4c28cc82e059c572bcddf59c693d6953caec509a4a686a1a751da56791651
+generated: "2022-10-13T12:22:41.197433861+02:00"
