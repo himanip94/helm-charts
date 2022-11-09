@@ -9,7 +9,8 @@ groups:
     labels:
       severity: warning
       tier: vmware
-      service: vrops-exporter
+      service: compute
+      support_group: compute
       meta: "`https://{{ $labels.target }}` API is down. Monitoring of the vCenter and NSX-T is no longer available."
       playbook: docs/devops/alert/vcenter/vrops.html#vrops_api_down
     annotations:
@@ -22,7 +23,8 @@ groups:
     labels:
       severity: warning
       tier: vmware
-      service: vrops-exporter
+      service: exporter
+      support_group: observability
       meta: "One or more collectors of the vrops-exporter for {{ $labels.target }} are degraded. Monitoring of vCenter and NSX-T is no longer available."
       playbook: "."
     annotations:
@@ -34,7 +36,8 @@ groups:
     labels:
       severity: warning
       tier: vmware
-      service: vrops-exporter inventory
+      service: exporter
+      support_group: observability
       meta: "vrops-exporter inventory for this region is not available. Collectors do not getting resources for monitoring."
     annotations:
       description: "vrops-exporter inventory for this region is not available. Collectors do not getting resources for monitoring."
@@ -46,7 +49,8 @@ groups:
     labels:
       severity: warning
       tier: vmware
-      service: vrops-exporter
+      service: exporter
+      support_group: observability
       meta: "vROps inventory is not having any data for {{ $labels.target }} anymore."
       playbook: docs/devops/alert/vcenter/vrops/#restart-vrops-cluster
       no_alert_on_absence: "true"
@@ -61,6 +65,7 @@ groups:
       severity: info
       tier: vmware
       service: compute
+      support_group: compute
       context: "vrops-exporter"
       meta: "Disk almost full with over 90% for {{ $labels.virtualmachine }}. Please increase disk size."
       playbook: docs/devops/alert/vcenter/
@@ -73,7 +78,8 @@ groups:
     labels:
       severity: warning
       tier: vmware
-      service: vcenter adapter
+      service: compute
+      support_group: compute
       meta: "The vCenter adapter for https://vrops-{{ $labels.vcenter }} is not receiving data."
       playbook: docs/devops/alert/vcenter/vrops.html#revalidatecertificate
       no_alert_on_absence: "true"
@@ -86,7 +92,8 @@ groups:
     labels:
       severity: info
       tier: vmware
-      service: vcenter adapter
+      service: compute
+      support_group: compute
       meta: "vROPs vCenter adapter for https://vrops-{{ $labels.vcenter }} is not receiving data for some objects."
       playbook: docs/devops/alert/vcenter/vrops.html#revalidatecertificate
       no_alert_on_absence: "true"
@@ -104,7 +111,8 @@ groups:
     labels:
       severity: warning
       tier: monitor
-      service: compute
+      service: exporter
+      support_group: observability
       meta: "Elektra dashboard: vROPs data is missing to serve customers with VM rightsizing recommendations"
       no_alert_on_absence: "true"
     annotations:
@@ -120,7 +128,8 @@ groups:
     labels:
       severity: warning
       tier: monitor
-      service: compute
+      service: exporter
+      support_group: observability
       meta: "Elektra dashboard: vROPs data is missing to serve customers with VM tools upgrade recommendations"
       no_alert_on_absence: "true"
     annotations:
@@ -133,7 +142,8 @@ groups:
     labels:
       severity: critical
       tier: monitor
-      service: vrops-exporter
+      service: exporter
+      support_group: observability
       meta: "Atlas path `{{ $labels.atlas_path }}` is down"
       no_alert_on_absence: "true"
     annotations:
