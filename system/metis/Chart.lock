@@ -5,5 +5,8 @@ dependencies:
 - name: owner-info
   repository: https://charts.eu-de-2.cloud.sap
   version: 0.2.0
-digest: sha256:37edef8f2d4c279e56afcd94870278bbcb31b93983647d3a79395f9c4b47ff78
-generated: "2022-10-21T10:34:25.615672+02:00"
+- name: prometheus-monitors
+  repository: file://../../common/prometheus-monitors
+  version: 0.0.1
+digest: sha256:2f440a87923f591ff3067c15faf4f0f94c7a38eb988ffab66d3c4da57ff99cae
+generated: "2022-11-14T14:23:26.003606+01:00"
