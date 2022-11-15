@@ -199,7 +199,7 @@ grpcIngress:
   # Additional annotations for the gRPC ingress.
   annotations: {}
 
-# If true, a custom Prometheus naming will take place.
+# If true, a custom Prometheus naming will take place. Only needed for vmware-monitoring.
 vmware: false
 
 traefik:
